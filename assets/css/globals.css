@@ -1,0 +1,64 @@
+/* Fails uzstāda un apraksta nemainīgos mājaslapas standartus */
+:root {
+    /* Mājaslapā izmantotās krāsas */
+    --sparkle-black: #000000;
+    --sparkle-gray: #2F4858;
+    --sparkle-orange: #FFA800;
+    --sparkle-orange-pale: #FFCB66;
+    --sparkle-white: #FFFFFF;
+
+    --sparkle-button: var(--sparkle-orange);
+    --sparkle-button-hover: #FFDA16;
+    --sparkle-button-active: #FF8A00;
+}
+@font-face {
+    /* Virsrakstu fonts */
+    font-family: 'Oswald', sans-serif;
+    src: url('/assets/fonts/Oswald-500-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    /* Lasāmā teksta fonts */
+    font-family: 'Montserrat', sans-serif;
+    src: url('/assets/fonts/Montserrat-400-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    /* Parastā teksta fonts */
+    font-family: 'Montserrat', sans-serif;
+    src: url('/assets/fonts/Montserrat-500-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--sparkle-gray);
+    background-color: var(--sparkle-white);
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--sparkle-gray);
+}

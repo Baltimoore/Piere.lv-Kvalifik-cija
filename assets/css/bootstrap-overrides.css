@@ -1,0 +1,4 @@
+/* Fails domāts bootstrap mainīgo pārrakstīšanai */
+.container-fluid, .nav {
+    padding: 0px;
+}
