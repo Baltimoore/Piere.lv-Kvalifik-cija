@@ -1,6 +1,6 @@
 /* Sadalīju css failus atsevišķās, tematiskās daļās */
-@import url("./globals.css");
-@import url("./bootstrap-overrides.css");
+@import url('globals.css');
+@import url('bootstrap-overrides.css');
 
 /* Navbar aprakstīšana */
 nav#navbar {
@@ -9,14 +9,14 @@ nav#navbar {
     background-color: var(--sparkle-white);
     overflow: hidden;
 }
-
+/* melnā brenda ikona */
 a.navbar-brand {
     margin: -2px 65px 0 62px;
     padding: 0;
     height: 90px;
     z-index: 3;
 }
-
+/* Konkrēti navbar linku sadaļas izskats */
 #navbarLinks {
     margin-top: 34px;
 }
@@ -24,7 +24,7 @@ a.navbar-brand {
     width: 100%;
 }
 #navbarLinks > .navbar-nav a.nav-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Medium', sans-serif;
     font-size: 18px;
     line-height: 22px;
     color: var(--sparkle-black);
@@ -37,19 +37,18 @@ a.navbar-brand {
 #languageSolo {
     margin: 0 58px 0 37px;
 }
-
-.rip {
-    margin-top: -11px;
-    z-index: 1;
+/* navbar atdalītājattēla izskats */
+.rip-navbar {
+    margin-top: -8px;
 }
-.rip > img {
-    max-width: 100%;
-    height: auto;
+.rip-navbar > img {
     position: relative;
     /* x gala nobīde | y gala nobīde | izzušana | ēnas krāsa */
     filter: drop-shadow(0 4px 2px rgb(0 0 0 / 0.25));
 }
 
+
+/* Videoklipa sadaļas izskats */
 div#video {
     margin-top: -73px;
 }
@@ -68,24 +67,29 @@ img#play {
     -ms-transform: translate(-50%, -50%);
 }
 
+
+/* Iepazīšanās sadaļas teksta izskats */
 #statement {
     padding: 20px;
     margin-bottom: 4px;
 }
 #statement > p {
+    text-align: center;
     margin: 130px auto;
     max-width: 660px;
 }
 
+
+/* Attēlu kolāžas/rindas izskats */
 #imageRow {
     height: 398px;
     position: relative;
-
 }
 #imageRow > div.row > div.col {
     padding: 0;
     margin: 0;
 }
+/* Konkrēto attēlu izskatu apraksti */
 #imageRow > div.row > div.col:nth-child(1) {
     padding-top: 14px;
 }
@@ -97,4 +101,171 @@ img#play {
 }
 #imageRow > div.row > div.col img {
     object-fit: cover;
+}
+/* rindu ieskaujošo 'plīsumu' apraksti */
+#imageRow > .rip,
+#support > .rip {
+    /* Apvienoju 3 bootstrap klases vienā deklarācijā
+    konkrēti "position-absolute bottom-0 start-50 translate-middle-x" */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Novirzes sadaāls izskata mainīgie */
+#questions {
+    margin: 157px auto 0 auto;
+}
+#questions > div.row div > .btn {
+    margin-top: 36px;
+}
+
+
+/* Ziņojuma formas nosūtīšanas mainīgie */
+#message {
+    margin: 158px auto 0 auto;
+    text-align: center;
+}
+#message > form {
+    margin-top: 59px;
+    max-width: 612px;
+}
+#message > form > div {
+    margin-bottom: 15px;
+}
+#message > form > div input {
+    height: 43px;
+}
+#message > form > div textarea {
+    height: 233px;
+}
+/* Formas sadaļa pēc 'tekstuālajiem' ievadlaukiem */
+#starHelp {
+    text-align: left;
+}
+#message > form > div.form-check {
+    padding: 0;
+    margin-top: 34px;
+    margin-left: 27px;
+    text-align: left;
+}
+#message > form > div.form-check > input[type='checkbox'] {
+    height: 16px;
+    width: 16px;
+}
+#message > form > div.form-check label,
+#message > form > div#starHelp p {
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 12px;
+    color: var(--sparkle-gray);
+}
+#message > form > div.form-check label {
+    margin-left: 13px;
+    margin-top: -3px;
+}
+/* Iesūtīšanas pogas paraksta mainīgie */
+#message > form > input[type='submit'] {
+    margin-top: 36px;
+}
+
+
+/* Atbalstītāju sadaļas izskata apraksts */
+#support {
+    background-color: var(--sparkle-orange-pale);
+    position: relative;
+    height: 481.125px;
+    margin-top: 150px;
+}
+#support > div > .row {
+    margin-top: 105px;
+    display: inline-flex;
+}
+#support > div > .row > h3 {
+    margin-bottom: 85px;
+}
+/* Katra atbalstītāja logo specifikācijas */
+#support > div > .row > .col > #logoLinearis {
+    margin-top: -20px;
+}
+
+
+/* Kājenes un sponsoru atdalošā sadaļa */
+#support > .rip.bottom-0 > img {
+    /* Piešķir apakšējam plīsumam pelēkzilo krāsu */
+    filter: brightness(0) saturate(100%) invert(25%) sepia(35%) saturate(491%) hue-rotate(160deg) brightness(94%) contrast(93%);
+}
+/* Kājenes izskats */
+#footer {
+    background-color: var(--sparkle-gray);
+    height: 342px;
+}
+#footer a, #footer p, #footer h5, #footer sub {
+    color: var(--sparkle-white);
+}
+#footer sub {
+    font-size: 14;
+}
+#footer a, #footer p {
+    font-size: 18px;
+}
+#footer h5 {
+    font-size: 24px;
+}
+/* Pirmā kolonna (datorā) */
+#footer-logo {
+    padding-left: 73px;
+}
+#footer-logo > img {
+    margin-top: 40px;
+}
+#footer-logo > sub:last-child {
+    /* copyright paziņojums, kas redzams datoros */
+    margin-top: 67px;
+}
+/* Otrā kolonna (datorā) */
+#footer-links {
+    padding-left: 45px;
+}
+#footer-links > ul {
+    margin-top: 35px
+}
+#footer-links > ul > li:first-child {
+    /* Jo attēlā šis ir nedaudz izvirzīts uz priekšu, nezināmu iemeslu dēļ */
+    margin-left: 3px;
+}
+#footer-links > ul > li {
+    margin-bottom: 17px;
+}
+/* Trešā kolonna (datorā) */
+#footer-company {
+    margin-left: -54px;
+    margin-top: 37px;
+}
+#footer-company > ul {
+    margin-top: 14px;
+}
+#footer-company > ul > li {
+    margin-bottom: 5.5px;
+}
+/* Ceturtā kolonna (datorā) */
+#footer-contact {
+    text-align: right;
+    margin-left: -10px;
+    margin-top: 38px;
+}
+#footer-contact > ul {
+    margin-top: 12px;
+}
+#footer-contact > ul > li {
+    margin-bottom: 6px;
+}
+#footer-contact > #contact-socials {
+    margin-top: 45px;
+}
+#footer-contact > #contact-socials > img {
+    margin-left: 23px;
+}
+#footer-contact > #privacy {
+    margin-top: 41px;
 }

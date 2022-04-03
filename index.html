@@ -64,7 +64,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid position-relative rip p-0">
+    <div class="container-fluid position-relative rip rip-navbar">
         <img class="p-0 mx-0" src="assets/img/ripped navbar.svg" />
     </div>
 
@@ -82,8 +82,10 @@
         </p>
     </header>
 
-    <div id="imageRow" class="container-fluid m-0 p-0">
-        <img src="/assets/img/ripped 6 7.svg" class="position-absolute top-0 start-50 translate-middle-x">
+    <div id="imageRow" class="container-fluid m-0">
+        <div class="rip top-0">
+            <img src="/assets/img/ripped 6 7.svg">
+        </div>
         <div class="row m-0">
             <div class="col">
                 <img src="/assets/img/Zanda_1.jpg">
@@ -99,138 +101,169 @@
                 <img src="/assets/img/Anda_2.jpg" class="col p-0">
             </div>
         </div>
-        <img src="/assets/img/ripped 6 8.svg" class="position-absolute bottom-0 start-50 translate-middle-x">
+        <div class="rip bottom-0">
+            <img src="/assets/img/ripped 6 8.svg">
+        </div>
     </div>
 
-    <div id="questions" class="container-fluid text-center m-0 p-0">
-        <div class="row justify-content-around">
-            <div id="clients" class="col">
+    <div id="questions" class="container-fluid text-center">
+        <div class="row m-0">
+            <div id="clients" class="col-md-6 col-sm-12">
                 <h3>Vēlies piepildīt savu sapni?</h3>
-                <a class="btn rounded-pill mt-5" href="#">Sapņotājiem</button>
+                <button type="button" class="btn rounded-pill">
+                    Sapņotājiem
+                </button>
             </div>
-            <div id="partners" class="col">
-                <h3>Vēlies palīdzēt kādam piepildīt sapni?</h3>
-                <a class="btn rounded-pill mt-5" href="#">Uzņēmējiem</button>
+            <div id="partners" class="col-md-6 col-sm-12">
+                <h3>Vēlies palīdzēt kādam pildīt sapni?</h3><button type="button" class="btn rounded-pill">
+                    Uzņēmējiem
+                </button>
             </div>
         </div>
     </div>
 
-    <div id="message" class="container-fluid text-center m-0 p-0">
+    <div id="message" class="container-fluid">
         <h2 class="text-center">Sazināties ar mums</h2>
-        <form action="" class="row">
-            <div class="mb-3 col-sm-12 col-md-6">
-                <input id="fullName" name="fullName" type="text" class="form-control" required
-                    placeholder="Vārds, Uzvārds*">
+        <form action="" class="mx-auto">
+            <!-- Šie draugi ir speciāli atdalīti, jo lielākajā daļā ierīču tiem ir jābūt blakus viens otram -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <input id="fullName" name="fullName" type="text" class="form-control" required
+                        placeholder="Vārds, Uzvārds*">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <input id="email" name="email" type="email" class="form-control" required placeholder="E-pasts*">
+                </div>
             </div>
-            <div class="mb-3 col-sm-12 col-md-6">
-                <input id="email" name="email" type="email" class="form-control" required placeholder="E-pasts*">
-            </div>
-            <div class="mb-3 col-12">
+            <div>
                 <input id="phone" name="tel" type="tel" class="form-control" required placeholder="Telefons*">
             </div>
-            <div class="mb-3 col-12">
-                <textarea id="comment" name="comment" class="form-control" rows="10"
+            <div>
+                <textarea id="comment" name="comment" class="form-control" rows="9"
                     placeholder="Jautājums, vai komentārs*"></textarea>
             </div>
-            <div id="starHelp" class="form-text">* obligāti aizpildāmie lauki</div>
-            <div class="row mb-3 form-check">
-                <input id="agreement" name="agreement" type="checkbox" class="form-control col-1" required>
-                <label for="agreement" class="form-label col-auto">Piekrītu, ka mani dati tiks izmantoti likumdošanā
-                    noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
+            <div id="starHelp">
+                <p>* obligāti aizpildāmie lauki</p>
             </div>
-            <input type="submit" class="mb-3 col-12" value="Sūtīt">
+            <div class="form-check">
+                <input id="agreement" name="agreement" type="checkbox" class="form-check-input" required>
+                <label class="form-check-label">
+                    Piekrītu, ka mani dati tiks izmantoti
+                    likumdošanā noteiktā kārtībā un tiks saglabāti
+                    līdz brīdim, kamēr tas būs nepieciešams.
+                </label>
+            </div>
+            <input type="submit" class="col-12 btn-small rounded-pill" value="Sūtīt">
         </form>
     </div>
 
-    <div id="support" class="container-fluid text-center m-0 p-0">
-        <h3>Atbalstītāji</h3>
-        <div class="row">
-            <img src="/assets/img/getlogo.png" alt="Teikums" class="col-auto">
-            <img src="/assets/img/sem_logo-2.png" alt="SEM" class="col-auto">
-            <img src="/assets/img/Citybee-logo.png" alt="CityBee" class="col-auto">
-            <img src="/assets/img/logo1.png" alt="Linearis Translations" class="col-auto">
+    <div id="support" class="container-fluid text-center">
+        <div class="rip top-0">
+            <img src="/assets/img/support-top.svg">
+        </div>
+        <div>
+            <div class="row justify-content-center">
+                <h3>Atbalstītāji</h3>
+                <div class="col">
+                    <img id="logoTeikums" src="/assets/img/logoTeikums.png" alt="Teikums" class="col-auto">
+                </div>
+                <div class="col">
+                    <img id="logoSEM" src="/assets/img/logoSEM.png" alt="SEM" class="col-auto">
+                </div>
+                <div class="col">
+                    <img id="logoCityBee" src="/assets/img/logoCitybee.png" alt="CityBee" class="col-auto">
+                </div>
+                <div class="col">
+                    <img id="logoLinearis" src="/assets/img/logoLinearis.png" alt="Linearis Translations"
+                        class="col-auto">
+                </div>
+            </div>
+        </div>
+        <div class="rip bottom-0">
+            <img src="/assets/img/support-bottom.svg">
         </div>
     </div>
 
-    <div id="footer" class="container-fluid m-0 p-0">
+    <div id="footer" class="container-fluid m-0">
         <footer class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div id="footer-logo" class="col col-lg-3 col-md-6 col-sm-12">
                 <!-- Redzams visās ierīcēs -->
                 <img src="/assets/img/GoldenV2Logo 3.png" alt="">
 
                 <!-- Redzams tikai viedierīcēs -->
                 <h5 class="d-block d-lg-none">Juris Gogulis</h5>
                 <!-- Redzams tikai planšetēs -->
-                <p class="d-none d-md-block d-lg-none">© SparkleHeart 2020. Visas tiesības aizsargātas.</p>
+                <sub class="d-none d-md-block d-lg-none">© SparkleHeart 2020. Visas tiesības aizsargātas.</sub>
                 <!-- Redzams tikai datoru ekrānos -->
                 <sub class="d-none d-lg-block">© SparkleHeart 2020.<br>Visas tiesības aizsargātas.</sub>
             </div>
 
             <!-- Redzams tikai datoru ekrānos -->
-            <div id="footer-links" class="col-lg-3 col-md-6 col-sm-12 d-none d-lg-block">
+            <div id="footer-links" class="col col-lg-3 col-md-6 col-sm-12 d-none d-lg-block">
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Ideja</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Ideja</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Piesaki Sapni</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Piesaki Sapni</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Uzņēmējiem</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Uzņēmējiem</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Sapņu banka</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Sapņu banka</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Sapņus atbalsta</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Sapņus atbalsta</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link px-0">Iedvesmas stāsti</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">Iedvesmas stāsti</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Redzams tikai datoru ekrānos -->
-            <div id="company-info" class="d-none d-lg-block col-lg-3">
+            <div id="footer-company" class="col d-none d-lg-block col-lg-3">
                 <h5>Biedrība SparkleHeart</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2">Reģistrācijas nr. 40008293119</p>
+                    <li class="nav-item">
+                        <p class="m-0">Reģistrācijas nr. 40008293119</p>
                     </li>
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2">Banka: SWEDBANK A/S</p>
+                    <li class="nav-item">
+                        <p class="m-0">Banka: SWEDBANK A/S</p>
                     </li>
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2">LV52HABA0551047652465</p>
+                    <li class="nav-item">
+                        <p class="m-0">LV52HABA0551047652465</p>
                     </li>
                 </ul>
             </div>
 
-            <div id="contact-info" class="col-lg-3 col-md-6 col-sm-12">
+            <div id="footer-contact" class="col col-lg-3 col-md-6 col-sm-12">
                 <!-- Redzams tikai datoru ekrānos -->
                 <h5 class="d-none d-lg-block">Juris Gogulis</h5>
                 <!-- Redzams visur -->
                 <ul class="nav flex-column">
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2 text2">juris.gogulis@sparkleheart.org</p>
+                    <li class="nav-item">
+                        <p class="m-0">juris.gogulis@sparkleheart.org</p>
                     </li>
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2 text2">+37126890034</p>
+                    <li class="nav-item">
+                        <p class="m-0">+37126890034</p>
                     </li>
-                    <li class="nav-item p-0 m-0">
-                        <p class="p-0 mb-2 text2">Biķernieku iela 24a - 5, LV-1006</p>
+                    <li class="nav-item">
+                        <p class="m-0">Biķernieku iela 24a - 5, LV-1006</p>
                     </li>
                 </ul>
                 <!-- Redzams tikai viedierīcēs -->
                 <b class="d-block d-lg-none">Skatīt rekvizītus</b>
                 <!-- Redzams visur -->
-                <div id="socials">
-
+                <div id="contact-socials">
+                    <img src="/assets/img/social-facebook.svg" alt="Facebook">
+                    <img src="/assets/img/social-instagram.svg" alt="Instagram">
                 </div>
                 <!-- Redzams tikai mobilajos telefonos -->
                 <p class="d-block d-md-none">© SparkleHeart 2020. Visas tiesības aizsargātas.</p>
                 <!-- Redzams visur -->
-                <sub>Privātuma politika</sub>
+                <div id="privacy"><a href="#"><sub>Privātuma politika</sub></a></div>
             </div>
         </footer>
     </div>

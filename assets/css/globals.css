@@ -13,36 +13,41 @@
 }
 @font-face {
     /* Virsrakstu fonts */
-    font-family: 'Oswald', sans-serif;
-    src: url('/assets/fonts/Oswald-500-Medium.ttf') format('truetype');
+    font-family: 'Oswald Medium', sans-serif;
+    src: url('../fonts/Oswald-500-Medium.woff') format('woff'),
+        url('../fonts/Oswald-500-Medium.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
 }
 @font-face {
     /* Lasāmā teksta fonts */
-    font-family: 'Montserrat', sans-serif;
-    src: url('/assets/fonts/Montserrat-400-Regular.ttf') format('truetype');
+    font-family: 'Montserrat Regular', sans-serif;
+    src: url('../fonts/Montserrat-400-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-400-Regular.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
 }
 @font-face {
     /* Parastā teksta fonts */
-    font-family: 'Montserrat', sans-serif;
-    src: url('/assets/fonts/Montserrat-500-Medium.ttf') format('truetype');
+    font-family: 'Montserrat Medium', sans-serif;
+    src: url('../fonts/Montserrat-500-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-500-Medium.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+body, p, a, h5 {
+    font-family: 'Montserrat Medium', sans-serif;
+}
+a {
     font-size: 24px;
-    color: var(--sparkle-gray);
-    background-color: var(--sparkle-white);
+    text-decoration: none;
+    color: inherit;
 }
 
 h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald Medium', sans-serif;
+    text-transform: uppercase;
 }
 h1 {
     font-size: 48px;
@@ -54,11 +59,40 @@ h3 {
     font-size: 24px;
 }
 
-header {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+sub, sup, header * {
+    font-family: 'Montserrat Regular', sans-serif;
+}
+header * {
     font-size: 18px;
     line-height: 22px;
-    text-align: center;
     color: var(--sparkle-gray);
+}
+sub, sup {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.rip {
+    z-index: 1;
+    width: 100%;
+}
+.rip > img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-small {
+    width: 182px;
+    height: 62px;
+    padding: inherit;
+
+    font-family: 'Montserrat Medium', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    align-items: center;
+    text-align: center;
+
+    border: none;
+    color: var(--sparkle-white);
+    background-color: var(--sparkle-button);
 }

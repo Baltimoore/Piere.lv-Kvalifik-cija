@@ -2,3 +2,48 @@
 .container-fluid, .nav {
     padding: 0px;
 }
+
+button, .btn {
+    width: 233px;
+    height: 50px;
+    padding: inherit;
+
+    font-family: 'Montserrat Medium', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    color: var(--sparkle-white);
+    background-color: var(--sparkle-button);
+}
+button:hover, .btn:hover {
+    color: var(--sparkle-white);
+    background-color: var(--sparkle-button-hover);
+}
+button:active, .btn:active {
+    color: var(--sparkle-white);
+    background-color: var(--sparkle-button-active);
+}
+
+.form-control, input[type='checkbox'] {
+    border: none;
+    border-radius: .35rem;
+
+    color: var(--sparkle-gray);
+    background-color: #e7e7e7;
+}
+.form-control {
+    padding: .5rem .75rem;
+
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.form-check-input {
+    margin-top: 0;
+}
+
+.nav-link {
+    color: inherit;
+}
